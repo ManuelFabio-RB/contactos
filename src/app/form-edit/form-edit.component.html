@@ -1,0 +1,29 @@
+<ion-header class = "ion-no-border">
+  <ion-toolbar>
+    <ion-title>Modificar Contacto</ion-title>
+    <ion-buttons slot = "start">
+      <ion-button color = "primary" (click) = "close()">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-buttons slot = "end">
+      <ion-button color = "primary" (click) = "submitForm()">Hecho</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen] = "true">
+  <form *ngIf = "contact" #editForm = "ngForm" [formGroup] = "editContactForm" (ngSubmit) = "editContact(editContactForm.value)"></form>
+    <ion-list>
+      <ion-item>
+        <ion-input formControlName = "name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName = "lastname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName = "email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName = "mobile"></ion-input>
+      </ion-item>
+    </ion-list>
+</ion-content>
