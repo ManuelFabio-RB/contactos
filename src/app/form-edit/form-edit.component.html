@@ -14,16 +14,16 @@
   <form *ngIf = "contact" #editForm = "ngForm" [formGroup] = "editContactForm" (ngSubmit) = "editContact(editContactForm.value)"></form>
     <ion-list>
       <ion-item>
-        <ion-input formControlName = "name"></ion-input>
+        <ion-input formControlName = "name">Nombre: </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input formControlName = "lastname"></ion-input>
+        <ion-input formControlName = "lastname">Apellidos: </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input formControlName = "email"></ion-input>
+        <ion-input formControlName = "email">Correo: </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input formControlName = "mobile"></ion-input>
+        <ion-input formControlName = "mobile">Teléfono: </ion-input>
       </ion-item>
     </ion-list>
 </ion-content>
